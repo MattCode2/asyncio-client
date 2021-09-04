@@ -16,7 +16,7 @@ from .socket import Callbacks, SocketHandler
 device = device.DeviceGenerator()
 
 class Client(Callbacks, SocketHandler):
-    def __init__(self, deviceId: str = None, socketDebugging = False):
+    def __init__(self, deviceId: str = None, socketDebugging = True): #needs specify deviceID
         self.api = "https://service.narvii.com/api/v1"
         self.authenticated = False
         self.configured = False
@@ -183,7 +183,7 @@ class Client(Callbacks, SocketHandler):
         headers.sid = self.sid
         await self.startup()
 
-    async def login(self, email: str, password: str):
+ (self, email: str, password: str):
         """
         Login into an account.
 
