@@ -1,0 +1,1 @@
+pip install git + https://github.com/MattCode2/asyncio-client.git
